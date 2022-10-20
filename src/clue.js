@@ -113,7 +113,14 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom(roomArr) {}
+function selectRandom(roomArr) {
+  if (roomArr.length === 1) return roomArr[0];
+  //somar 1 pois usando o floor, ou nao sorteia o room 1
+  aleatory = Math.floor(Math.random() * roomArr.length + 1);
+  console.log(aleatory, '<---------');
+  return roomArr[aleatory - 1];
+}
+selectRandom(roomsArray);
 
 function pickMystery() {}
 
